@@ -1,0 +1,150 @@
+# Auto Car Detailing Melbourne - Decap CMS Configuration
+# SAFE: Only writes to data.json - index.html stays intact
+
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: simple
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "content"
+    label: "Website Content"
+    description: "Edit all text, services, prices, gallery images. Changes write to data.json only."
+    files:
+      - file: "data.json"
+        label: "All Content"
+        name: "all_content"
+        format: "json"
+        editor:
+          preview: false
+        fields:
+          - label: "Brand Name"
+            name: "brand_name"
+            widget: "string"
+            default: "Auto Car Detailing Melbourne"
+
+          - label: "Phone Number"
+            name: "nav_phone"
+            widget: "string"
+            default: "+61 411 811 687"
+
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Background Image URL", name: "hero_bg", widget: "image", default: "/assets/images/hero-bg.jpg" }
+              - { label: "Main Headline", name: "hero_title", widget: "string", default: "Premium Auto Detailing in Melbourne", hint: "HTML allowed for highlights" }
+              - { label: "Subtitle", name: "hero_subtitle", widget: "text", default: "We bring your car back to life with professional detailing." }
+              - { label: "Button 1 Text", name: "hero_btn1", widget: "string", default: "Book via WhatsApp" }
+              - { label: "Button 2 Text", name: "hero_btn2", widget: "string", default: "Our Services" }
+
+          - label: "Statistics"
+            name: "stats"
+            widget: "list"
+            collapsed: false
+            fields:
+              - { label: "Number", name: "num", widget: "string", default: "500+" }
+              - { label: "Label", name: "label", widget: "string", default: "Cars Detailed" }
+            default:
+              - { num: "500+", label: "Cars Detailed" }
+              - { num: "5.0", label: "Star Rating" }
+              - { num: "100%", label: "Satisfaction" }
+              - { num: "24/7", label: "Open Hours" }
+
+          - label: "Services Section Headings"
+            name: "services_headings"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Section Label", name: "services_label", widget: "string", default: "Premium Services" }
+              - { label: "Section Title", name: "services_title", widget: "string", default: "What We Offer" }
+              - { label: "Section Subtitle", name: "services_subtitle", widget: "string", default: "Click any service to learn more and book via WhatsApp." }
+
+          - label: "Services (Add/Edit/Delete/Reorder)"
+            name: "services"
+            widget: "list"
+            collapsed: false
+            hint: "Add new services, remove old ones, change prices. Everything updates automatically."
+            fields:
+              - { label: "Icon Class", name: "icon", widget: "string", default: "fa-solid fa-car", hint: "Font Awesome class, e.g. fa-solid fa-spray-can-sparkle" }
+              - { label: "Title", name: "title", widget: "string", default: "Full Car Detailing" }
+              - { label: "Description", name: "desc", widget: "text", default: "Complete inside & out premium detailing." }
+              - { label: "Price", name: "price", widget: "string", default: "From $150", hint: "e.g. From $150, $120" }
+            default:
+              - { icon: "fa-solid fa-spray-can-sparkle", title: "Full Car Detailing", desc: "Complete inside & out premium detailing. We meticulously clean, polish, and protect every surface - restoring your car to showroom condition.", price: "From $150" }
+              - { icon: "fa-solid fa-broom", title: "Interior Deep Clean", desc: "Deep seat shampooing, carpet extraction, stain removal, and leather conditioning. Your cabin will look, feel, and smell brand new.", price: "From $120" }
+              - { icon: "fa-solid fa-paint-roller", title: "Paint Protection", desc: "Premium ceramic coating and paint protection film. Shield your car from UV rays, bird droppings, and minor scratches.", price: "From $250" }
+              - { icon: "fa-solid fa-droplet", title: "Stain Removal", desc: "Specialized treatment for tough stains - coffee, wine, mud, oil, and more. Professional-grade products that won't damage your interior.", price: "From $80" }
+
+          - label: "Gallery Section Headings"
+            name: "gallery_headings"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Section Label", name: "gallery_label", widget: "string", default: "Our Work" }
+              - { label: "Section Title", name: "gallery_title", widget: "string", default: "Photo Gallery" }
+              - { label: "Section Subtitle", name: "gallery_subtitle", widget: "string", default: "See the quality of our work - every car tells a story of perfection." }
+
+          - label: "Gallery Images (Upload and Replace)"
+            name: "gallery"
+            widget: "list"
+            collapsed: false
+            hint: "Upload new before/after car photos. Each image has an editable label."
+            fields:
+              - { label: "Image URL", name: "url", widget: "image", default: "/assets/images/gallery-1.jpg" }
+              - { label: "Label", name: "label", widget: "string", default: "Car Detailing Result" }
+            default:
+              - { label: "Sedan Showroom Shine" }
+              - { label: "SUV Interior Restoration" }
+              - { label: "Paint Correction Detail" }
+              - { label: "Sports Car Ceramic Coat" }
+              - { label: "Luxury Interior Deep Clean" }
+
+          - label: "Contact Section Headings"
+            name: "contact_headings"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Section Label", name: "contact_label", widget: "string", default: "Get In Touch" }
+              - { label: "Section Title", name: "contact_title", widget: "string", default: "Visit Our Workshop" }
+              - { label: "Section Subtitle", name: "contact_subtitle", widget: "text", default: "Located in Tarneit, Melbourne. Open 24 hours - call or message us anytime!" }
+
+          - label: "Contact Details"
+            name: "contact_items"
+            widget: "list"
+            collapsed: false
+            fields:
+              - { label: "Icon Class", name: "icon", widget: "string", default: "fab fa-whatsapp" }
+              - { label: "Icon Color (hex)", name: "iconColor", widget: "string", default: "#25D366" }
+              - { label: "Heading", name: "label", widget: "string", default: "WhatsApp" }
+              - { label: "Text", name: "text", widget: "string", default: "Chat with us directly" }
+              - { label: "Type", name: "type", widget: "select", options: ["", "wa"], default: "", hint: "Select 'wa' to make it a clickable WhatsApp link" }
+            default:
+              - { icon: "fab fa-whatsapp", iconColor: "#25D366", label: "WhatsApp", text: "Chat with us directly", type: "wa" }
+              - { icon: "fas fa-phone-alt", iconColor: "#e94560", label: "Phone", text: "+61 411 811 687", type: "wa" }
+              - { icon: "fas fa-map-pin", iconColor: "#e94560", label: "Address", text: "34 Bandicoot Loop, Tarneit VIC 3029, Australia", type: "" }
+              - { icon: "fas fa-clock", iconColor: "#e94560", label: "Business Hours", text: "Open 24 hours - Every day", type: "" }
+
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Brand Name", name: "footer_brand", widget: "string", default: "Auto Car Detailing Melbourne" }
+              - { label: "Description", name: "footer_desc", widget: "text", default: "Premium car detailing services in Melbourne. 5.0 star rated." }
+              - { label: "Quick Links Title", name: "footer_quick_label", widget: "string", default: "Quick Links" }
+              - { label: "Contact Title", name: "footer_contact_label", widget: "string", default: "Contact" }
+              - { label: "Copyright", name: "footer_copyright", widget: "string", default: "(c) 2026 Auto Car Detailing Melbourne. All rights reserved." }
+
+          - label: "Social Media Links"
+            name: "social"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Facebook URL", name: "social_facebook", widget: "string", default: "#" }
+              - { label: "Instagram URL", name: "social_instagram", widget: "string", default: "#" }
+              - { label: "YouTube URL", name: "social_youtube", widget: "string", default: "#" }

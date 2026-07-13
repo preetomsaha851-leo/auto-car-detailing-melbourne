@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS - Auto Car Detailing Melbourne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a1a;
+            color: white;
+            min-height: 100vh;
+        }
+        .cms-header {
+            background: #12122a;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 20px;
+            text-align: center;
+        }
+        .cms-header h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 4px;
+        }
+        .cms-header p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.4);
+        }
+        .cms-content {
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .cms-content .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .cms-content h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .cms-content p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        .cms-content a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #e94560, #ff6b6b);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .cms-content a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(233,69,96,0.4);
+        }
+        .cms-footer {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255,255,255,0.2);
+            font-size: 0.78rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="cms-header">
+        <h1>⚡ Auto Car Detailing Melbourne</h1>
+        <p>Content Management System</p>
+    </div>
+    <div class="cms-content">
+        <div class="icon">✏️</div>
+        <h2>Welcome to the CMS</h2>
+        <p>Sign in with your Netlify account to edit all website content — including services, prices, gallery images, contact info, and more.</p>
+        <a href="#" onclick="event.preventDefault(); window.netlifyIdentity && window.netlifyIdentity.open();">
+            <span>🔐</span> Sign in with Netlify
+        </a>
+        <p style="margin-top:16px;font-size:0.82rem;">
+            Signed in? <a href="admin/" style="color:#25D366;text-decoration:underline;">Go to CMS →</a>
+        </p>
+    </div>
+    <div class="cms-footer">© 2026 Auto Car Detailing Melbourne</div>
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", function(user) {
+                if (!user) {
+                    window.netlifyIdentity.on("login", function() {
+                        document.location.href = "admin/";
+                    });
+                } else {
+                    // Already logged in, redirect to CMS
+                    if (window.location.pathname.endsWith('admin/index.html') || 
+                        window.location.pathname.endsWith('admin/')) {
+                        // Already on admin page, CMS will load
+                    } else {
+                        document.location.href = "admin/";
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

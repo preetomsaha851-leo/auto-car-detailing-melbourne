@@ -1,0 +1,71 @@
+{
+  "brand_name": "Auto Car Detailing Melbourne",
+  "nav_phone": "+61 411 811 687",
+  "hero_bg": "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=1920&q=80",
+  "hero_title": "Premium <span class=\"highlight\">Auto Detailing</span> in Melbourne",
+  "hero_subtitle": "We bring your car back to life with professional detailing, polishing, and protection. Experience the finest car care in Tarneit, Melbourne. Guaranteed satisfaction.",
+  "hero_btn1": "Book via WhatsApp",
+  "hero_btn2": "Our Services",
+  "stats": [
+    { "num": "500+", "label": "Cars Detailed" },
+    { "num": "5.0", "label": "Star Rating" },
+    { "num": "100%", "label": "Satisfaction" },
+    { "num": "24/7", "label": "Open Hours" }
+  ],
+  "services_label": "Premium Services",
+  "services_title": "What We Offer",
+  "services_subtitle": "Click any service to learn more and book via WhatsApp.",
+  "services": [
+    {
+      "icon": "fa-solid fa-spray-can-sparkle",
+      "title": "Full Car Detailing",
+      "desc": "Complete inside & out premium detailing. We meticulously clean, polish, and protect every surface — restoring your car to showroom condition.",
+      "price": "From $150"
+    },
+    {
+      "icon": "fa-solid fa-broom",
+      "title": "Interior Deep Clean",
+      "desc": "Deep seat shampooing, carpet extraction, stain removal, and leather conditioning. Your cabin will look, feel, and smell brand new.",
+      "price": "From $120"
+    },
+    {
+      "icon": "fa-solid fa-paint-roller",
+      "title": "Paint Protection",
+      "desc": "Premium ceramic coating and paint protection film. Shield your car from UV rays, bird droppings, and minor scratches.",
+      "price": "From $250"
+    },
+    {
+      "icon": "fa-solid fa-droplet",
+      "title": "Stain Removal",
+      "desc": "Specialized treatment for tough stains — coffee, wine, mud, oil, and more. Professional-grade products that won't damage your interior.",
+      "price": "From $80"
+    }
+  ],
+  "gallery_label": "Our Work",
+  "gallery_title": "Photo Gallery",
+  "gallery_subtitle": "See the quality of our work — every car tells a story of perfection.",
+  "gallery": [
+    { "url": "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=600&q=80", "label": "Sedan Showroom Shine" },
+    { "url": "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=600&q=80", "label": "SUV Interior Restoration" },
+    { "url": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&q=80", "label": "Paint Correction Detail" },
+    { "url": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&q=80", "label": "Sports Car Ceramic Coat" },
+    { "url": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80", "label": "Luxury Interior Deep Clean" }
+  ],
+  "contact_label": "Get In Touch",
+  "contact_title": "Visit Our Workshop",
+  "contact_subtitle": "Located in Tarneit, Melbourne. Open 24 hours — call or message us anytime!",
+  "contact_items": [
+    { "icon": "fab fa-whatsapp", "iconColor": "#25D366", "label": "WhatsApp", "text": "Chat with us directly", "type": "wa" },
+    { "icon": "fas fa-phone-alt", "iconColor": "#e94560", "label": "Phone", "text": "+61 411 811 687", "type": "wa" },
+    { "icon": "fas fa-map-pin", "iconColor": "#e94560", "label": "Address", "text": "34 Bandicoot Loop, Tarneit VIC 3029, Australia", "type": "" },
+    { "icon": "fas fa-clock", "iconColor": "#e94560", "label": "Business Hours", "text": "Open 24 hours — Every day", "type": "" }
+  ],
+  "footer_brand": "Auto Car Detailing Melbourne",
+  "footer_desc": "Premium car detailing services in Melbourne. 5.0 ★ rated with hundreds of happy customers.",
+  "footer_quick_label": "Quick Links",
+  "footer_contact_label": "Contact",
+  "footer_copyright": "© 2026 Auto Car Detailing Melbourne. All rights reserved.",
+  "social_facebook": "#",
+  "social_instagram": "#",
+  "social_youtube": "#"
+}
